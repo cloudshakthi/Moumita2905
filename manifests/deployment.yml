@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cloudshakthimoumita 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudshakthimoumita
+  template:
+    metadata:
+      labels:
+        app: cloudshakthimoumita 
+    spec:
+      containers:
+        - name: cloudshakthimoumita 
+          image: acr290525.azurecr.io/cloudshakthimoumita
+          ports:
+          - containerPort: 8080
